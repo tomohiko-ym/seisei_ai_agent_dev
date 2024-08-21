@@ -15,4 +15,4 @@ langchain_text_splitters==0.0.1
 youtube-transcript-api==0.6.2
 pytube==15.0.0
 PyMuPDF==1.23.25
-faiss-cpu==1.74
+faiss-cpu==1.7.4
