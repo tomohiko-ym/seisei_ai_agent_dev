@@ -21,3 +21,4 @@ duckduckgo-search==4.2
 html2text==2020.1.16
 lxml[html_clean]==5.2.1
 readability-lxml==0.8.1
+streamlit-feedback==0.1.3
