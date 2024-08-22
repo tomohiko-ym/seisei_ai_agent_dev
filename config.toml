@@ -1,0 +1,8 @@
+# config.toml
+
+[server]
+headless = true  # Streamlitアプリケーションをヘッドレスモードで実行
+
+[api]
+langchain_api_base = "https://api.langsmith.com"  # Langsmith APIのベースURL
+langchain_api_key = "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"  # 取得したAPIキー
