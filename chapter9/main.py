@@ -1,8 +1,8 @@
-import sys
-import os
+#import sys
+#import os
 
 # main.py の絶対パスを取得し、tools ディレクトリをパスに追加
-sys.path.append(os.path.join(os.path.dirname(__file__), 'tools'))
+#sys.path.append(os.path.join(os.path.dirname(__file__), 'tools'))
 
 # GitHub: https://github.com/naotaka1128/llm_app_codes/chapter_009/main.py
 import streamlit as st
