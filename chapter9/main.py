@@ -1,6 +1,6 @@
 # LangChain APIキー
-import os
-langchain_api_key = os.getenv("LANGCHAIN_API_KEY")
+# import os
+# langchain_api_key = os.getenv("LANGCHAIN_API_KEY")
 
 # GitHub: https://github.com/naotaka1128/llm_app_codes/chapter_009/main.py
 import streamlit as st
