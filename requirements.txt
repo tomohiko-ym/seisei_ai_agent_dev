@@ -25,5 +25,4 @@ streamlit-feedback==0.1.3
 python-magic==0.4.27
 db-dtypes==1.2.0
 google-cloud-bigquery==3.21.0
-python-magic-bin
-python-dotenv
+python-magic-bin==0.4.14
