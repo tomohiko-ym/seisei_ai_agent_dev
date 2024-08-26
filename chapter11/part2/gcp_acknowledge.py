@@ -10,8 +10,8 @@ try:
 except Exception as e:
     st.error(f"認証情報のロードに失敗しました: {e}")
 
-print(credentials)
-print(bq_client)
+st.write(credentials)
+st.write(bq_client)
 
 # クエリの実行
 query = "Let's start analysis"
