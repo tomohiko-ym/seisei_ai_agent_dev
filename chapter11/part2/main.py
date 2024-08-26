@@ -53,8 +53,7 @@ def init_page():
             memory_key="chat_history",
             k=10
         )
-        st.session_state.custom_system_prompt = load_system_prompt(
-            "prompt/system_prompt.txt")
+        st.session_state.custom_system_prompt = load_system_prompt("prompt/system_prompt.txt")
         st.session_state.uploaded_files = []
 
 
