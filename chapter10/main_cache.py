@@ -13,8 +13,8 @@ from langchain_anthropic import ChatAnthropic
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 # custom tools
-from ./chapter10/tools.fetch_qa_content import fetch_qa_content
-from ./chapter10/tools.fetch_stores_by_prefecture import fetch_stores_by_prefecture
+from tools.fetch_qa_content import fetch_qa_content
+from tools.fetch_stores_by_prefecture import fetch_stores_by_prefecture
 from src.cache import Cache
 
 ###### dotenv を利用しない場合は消してください ######
