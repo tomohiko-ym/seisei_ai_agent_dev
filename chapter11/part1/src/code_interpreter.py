@@ -46,7 +46,7 @@ class CodeInterpreterClient:
         """
 
     def _create_file_directory(self):
-        directory = "./files/"
+        directory = "./chapter11/part1/files/"
         os.makedirs(directory, exist_ok=True)
 
     def _create_assistant_agent(self):
