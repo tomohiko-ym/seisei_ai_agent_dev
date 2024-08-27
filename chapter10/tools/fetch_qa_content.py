@@ -14,7 +14,7 @@ class FetchQAContentInput(BaseModel):
 
 @st.cache_resource
 def load_qa_vectorstore(
-    vectorstore_path="./vectorstore/qa_vectorstore"
+    vectorstore_path="./chapter10/vectorstore/qa_vectorstore"
 ):
     """「よくある質問」のベクトルDBをロードする"""
     embeddings = OpenAIEmbeddings()
