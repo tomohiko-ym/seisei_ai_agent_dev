@@ -44,7 +44,7 @@ def csv_upload():
             if not file.name in st.session_state.uploaded_files:
                 assistant_api_file_id = st.session_state.code_interpreter_client.upload_file(file.read())
                 st.session_state.custom_system_prompt += \
-                    f"\アップロードファイル名: ./chapter11/part1/files/{file.name} (Code Interpreterでのpath: /mnt/data/{assistant_api_file_id})\n"
+                    f"\アップロードファイル名: {./chapter11/part1/files/file.name} (Code Interpreterでのpath: /mnt/data/{assistant_api_file_id})\n"
                 st.session_state.uploaded_files.append(file.name)
         else:
             st.write("データ分析したいファイルをアップロードしてね")
