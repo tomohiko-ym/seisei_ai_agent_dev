@@ -16,8 +16,8 @@ from langchain_anthropic import ChatAnthropic
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 # custom tools
-from tools.search_ddg import search_ddg
-from tools.fetch_page import fetch_page
+from ./chapter10/tools.search_ddg import search_ddg
+from ./chapter10/tools.fetch_page import fetch_page
 
 ###### dotenv を利用しない場合は消してください ######
 try:
