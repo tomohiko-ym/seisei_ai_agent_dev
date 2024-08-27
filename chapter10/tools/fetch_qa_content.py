@@ -5,6 +5,7 @@ from langchain_core.tools import tool
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.pydantic_v1 import (BaseModel, Field)
+from pathlib import Path
 
 
 class FetchQAContentInput(BaseModel):
@@ -14,7 +15,7 @@ class FetchQAContentInput(BaseModel):
 
 @st.cache_resource
 def load_qa_vectorstore(
-    vectorstore_path="./vectorstore/qa_vectorstore"
+    vectorstore_path = Path(__file__).parent / "vectorstore/qa_vectorstore"
 ):
     """「よくある質問」のベクトルDBをロードする"""
     embeddings = OpenAIEmbeddings()
