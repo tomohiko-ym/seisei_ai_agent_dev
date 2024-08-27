@@ -16,7 +16,7 @@ except ImportError:
 
 def main():
     # CSVファイルから「よくある質問」を読み込む
-    file_path = r"C:\Users\user\生成AIアプリ＆エージェント開発入門\chapter10\data\bearmobile_QA.csv"
+    file_path = "./data/bearmobile_QA.csv"
     qa_df = pd.read_csv(file_path)  # question,answer
 
     # ベクトルDBに書き込むデータを作る
