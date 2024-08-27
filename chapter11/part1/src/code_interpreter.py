@@ -28,7 +28,7 @@ class CodeInterpreterClient:
     ===============
     from src.code_interpreter import CodeInterpreter
     code_interpreter = CodeInterpreter()
-    code_interpreter.upload_file(open('file.csv', 'rb').read())
+    code_interpreter.upload_file(open('./chapter11/part1/file.csv', 'rb').read())
     code_interpreter.run("file.csvの内容を読み取ってグラフを書いてください")
     """
     def __init__(self):
