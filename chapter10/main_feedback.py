@@ -84,7 +84,7 @@ def select_model():
 
 def create_agent():
     tools = [fetch_qa_content, fetch_stores_by_prefecture]
-    custom_system_prompt = load_system_prompt("./prompt/system_prompt.txt")
+    custom_system_prompt = load_system_prompt("./chapter10/prompt/system_prompt.txt")
     prompt = ChatPromptTemplate.from_messages([
         ("system", custom_system_prompt),
         MessagesPlaceholder(variable_name="chat_history"),
