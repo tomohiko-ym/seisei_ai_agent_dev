@@ -13,7 +13,7 @@ class FetchStoresInput(BaseModel):
 
 @st.cache_data(ttl="1d")
 def load_stores_from_csv():
-    df = pd.read_csv('./data/bearmobile_stores.csv')
+    df = pd.read_csv('./chapter10/data/bearmobile_stores.csv')
     return df.sort_values(by='pref_id')
 
 
