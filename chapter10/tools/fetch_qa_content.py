@@ -17,9 +17,13 @@ class FetchQAContentInput(BaseModel):
 @st.cache_resource
 def load_qa_vectorstore():    
     try:
-        vectorstore_path = "./vectorstore/qa_vectorstore"
+        vectorstore_path = os.path.join("chapter10", "vectorstore", "qa_vectorstore", "index.faiss")
+        print(f"Checking if FAISS index file exists at: {vectorestore_path}")
+        
         if not os.path.exists(vectorstore_path):
             raise FileNotFoundError(f"FAISS index file not found at {vectorestore_path}")
+            
+        print("FAISS index file found. Loading...")
         return FAISS.load_local(vectorestore_path)   
     except Exception as e:
         print(f"Error loading FAISS index: {e}")
