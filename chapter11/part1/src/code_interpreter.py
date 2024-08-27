@@ -46,7 +46,7 @@ class CodeInterpreterClient:
         """
 
     def _create_file_directory(self):
-        directory = "./files/"
+        directory = "./chapter11/part1/files/"
         os.makedirs(directory, exist_ok=True)
 
     def _create_assistant_agent(self):
@@ -261,7 +261,7 @@ class CodeInterpreterClient:
         if not extension:
             extension = ""
 
-        file_name = f"./files/{file_id}{extension}"
+        file_name = f"./chapter11/part1/files/{file_id}{extension}"
         with open(file_name, "wb") as file:
             file.write(data_bytes)
 
