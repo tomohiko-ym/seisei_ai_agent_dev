@@ -28,7 +28,7 @@ class CodeInterpreterClient:
     ===============
     from src.code_interpreter import CodeInterpreter
     code_interpreter = CodeInterpreter()
-    code_interpreter.upload_file(open('./chapter11/part1/file.csv', 'rb').read())
+    code_interpreter.upload_file(open('./chapter11/part1/files/file.csv', 'rb').read())
     code_interpreter.run("file.csvの内容を読み取ってグラフを書いてください")
     """
     def __init__(self):
@@ -118,7 +118,7 @@ class CodeInterpreterClient:
         )
 
         Args:
-            file_content (_type_): open('file.csv', 'rb').read()
+            file_content (_type_): open('./chapter11/part1/files/file.csv', 'rb').read()
         """
         file = self.openai_client.files.create(
             file=file_content,
