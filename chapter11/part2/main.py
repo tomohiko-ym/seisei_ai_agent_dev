@@ -104,7 +104,7 @@ def parse_response(response):
     responseの例
     ===    
     ビットコインの終値のチャートを作成しました。以下の画像で確認できます。
-    <img src="./files/file-s4W0rog1pjneOAtWeq21lbDy.png" alt="Bitcoin Closing Price Chart">
+    <img src="./chapter11/part2/files/file-s4W0rog1pjneOAtWeq21lbDy.png" alt="Bitcoin Closing Price Chart">
 
     image_pathを取得した後はimgタグを削除しておく
     """
