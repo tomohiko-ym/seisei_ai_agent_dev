@@ -256,7 +256,7 @@ class CodeInterpreterClient:
         if not extension:
             extension = ""
 
-        file_name = f"./files/{file_id}{extension}"
+        file_name = f"./chapter11/part2/files/{file_id}{extension}"
         with open(file_name, "wb") as file:
             file.write(data_bytes)
 
