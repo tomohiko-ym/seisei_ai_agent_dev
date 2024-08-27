@@ -27,6 +27,6 @@ def code_interpreter_tool(code):
     Returns:
     - text: Code Interpreter が出力したテキスト (コード実行結果が主)
     - files: Code Interpreter が保存したファイルのパス
-        - ファイル先は、`./files/` 以下に保存されます。
+        - ファイル先は、`./chapter11/part1/files/` 以下に保存されます。
     """
     return st.session_state.code_interpreter_client.run(code)
