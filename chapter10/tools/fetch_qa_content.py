@@ -20,7 +20,7 @@ def load_qa_vectorstore():
         vectorstore_path = "./vectorstore/qa_vectorstore"
         if not os.path.exists(vectorstore_path):
             raise FileNotFoundError(f"FAISS index file not found at {vectorestore_path}")
-        return FAISS.load_local(index_path)   
+        return FAISS.load_local(vectorestore_path)   
     except Exception as e:
         print(f"Error loading FAISS index: {e}")
         raise
