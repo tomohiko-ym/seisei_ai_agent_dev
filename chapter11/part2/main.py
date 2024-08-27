@@ -54,7 +54,7 @@ def init_page():
             k=10
         )
         st.session_state.custom_system_prompt = load_system_prompt(
-            "./prompt/system_prompt.txt")
+            "./chapter11/part2/prompt/system_prompt.txt")
         st.session_state.uploaded_files = []
 
 
