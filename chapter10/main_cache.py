@@ -13,8 +13,8 @@ from langchain_anthropic import ChatAnthropic
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 # custom tools
-from tools.fetch_qa_content import fetch_qa_content
-from tools.fetch_stores_by_prefecture import fetch_stores_by_prefecture
+from ./chapter10/tools.fetch_qa_content import fetch_qa_content
+from ./chapter10/tools.fetch_stores_by_prefecture import fetch_stores_by_prefecture
 from src.cache import Cache
 
 ###### dotenv を利用しない場合は消してください ######
@@ -82,7 +82,7 @@ def create_agent():
     ## https://learn.deeplearning.ai/functions-tools-agents-langchain/lesson/7/conversational-agent
     tools = [fetch_qa_content, fetch_stores_by_prefecture]
     # キャッシュを利用するように変更
-    custom_system_prompt = load_system_prompt("./prompt/system_prompt.txt")
+    custom_system_prompt = load_system_prompt("./chapter10/prompt/system_prompt.txt")
     prompt = ChatPromptTemplate.from_messages([
         ("system", custom_system_prompt),
         MessagesPlaceholder(variable_name="chat_history"),
