@@ -6,7 +6,8 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.pydantic_v1 import (BaseModel, Field)
 #from pathlib import Path
-
+import os
+import faiss
 
 class FetchQAContentInput(BaseModel):
     """ 型を指定するためのクラス """
@@ -14,9 +15,16 @@ class FetchQAContentInput(BaseModel):
 
 
 @st.cache_resource
-def load_qa_vectorstore(
-    vectorstore_path = "./vectorstore/qa_vectorstore"
-):
+def load_qa_vectorstore():    
+    try:
+        vectorstore_path = "./vectorstore/qa_vectorstore"
+        if not os.path.exists(vectorstore_path):
+            raise FileNotFoundError(f"FAISS index file not found at {vectorestore_path}")
+        return FAISS.load_local(index_path)   
+    except Exception as e:
+        print(f"Error loading FAISS index: {e}")
+        raise
+        
     """「よくある質問」のベクトルDBをロードする"""
     embeddings = OpenAIEmbeddings()
     return FAISS.load_local(
@@ -24,7 +32,6 @@ def load_qa_vectorstore(
         embeddings=embeddings,
         allow_dangerous_deserialization=True
     )
-
 
 @tool(args_schema=FetchQAContentInput)
 def fetch_qa_content(query):
