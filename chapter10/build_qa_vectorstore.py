@@ -16,7 +16,7 @@ except ImportError:
 
 def main():
     # CSVファイルから「よくある質問」を読み込む
-    file_path = "./data/bearmobile_QA.csv"
+    file_path = "./chapter10/data/bearmobile_QA.csv"
     qa_df = pd.read_csv(file_path)  # question,answer
 
     # ベクトルDBに書き込むデータを作る
@@ -27,7 +27,7 @@ def main():
     # 上記のデータをベクトルDBに書き込む
     embeddings = OpenAIEmbeddings()
     db = FAISS.from_texts(qa_texts, embeddings)
-    db.save_local('./vectorstore/qa_vectorstore')
+    db.save_local('./chapter10/vectorstore/qa_vectorstore')
 
 
 if __name__ == '__main__':
