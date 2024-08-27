@@ -9,7 +9,7 @@ from langchain_community.vectorstores import FAISS
 class Cache:
     def __init__(
         self,
-        vectorstore_path="./vectorstore/cache",
+        vectorstore_path="./chapter10/vectorstore/cache",
     ):
         self.vectorstore_path = vectorstore_path
         self.embeddings = OpenAIEmbeddings()
